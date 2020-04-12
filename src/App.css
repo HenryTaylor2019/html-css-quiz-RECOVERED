@@ -73,6 +73,8 @@ body {
   box-shadow: 1px antiquewhite;
   border-radius: 10%;
   box-shadow: 2.5px 5px #888888;
+    margin-bottom: 20px;
+
 
 }
 
@@ -91,11 +93,11 @@ h1 {
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 30px;
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 p {

@@ -5,7 +5,7 @@ class Quiz extends Component {
     static contextType = QuizContext;
 
     render() {
-        const { quizData, handleCorrect, handleIncorrect, handleNextQuestion, questionNumber, incorrect, score } = this.context;
+        const { quizData, handleCorrect, handleIncorrect, questionNumber, handleReset, incorrect, score } = this.context;
 
         let object = quizData[questionNumber];
 
@@ -14,35 +14,48 @@ class Quiz extends Component {
         let wrongOne = object.wrongOne;
         let wrongTwo = object.wrongTwo;
 
-        let winningMessage;
+        // let winningMessage;
 
-        if (score > 0) {
-            winningMessage = 'Yayy'
-        } else if (incorrect > 0) {
-            winningMessage = 'twat'
-        } else {
-            winningMessage = null;
-        }
+        // if (score > 0) {
+        //     winningMessage = 'Yayy'
+        // } else if (incorrect > 0) {
+        //     winningMessage = 'twat'
+        // } else {
+        //     winningMessage = null;
+        // }
+
+        // let answer;
+
+        // if (questionNumber % 2 === 0) {
+        //     answer = correct
+        // } else if (questionNumber % 2 !== 0) {
+        //     answer = wrongOne
+        // } else {
+        //     answer = wrongTwo
+        // }
 
         return (
             <div >
+                <button onClick={handleReset}>Home</button>
+
+                <h3>{score} out of 10</h3>
+
                 <h2>{question}</h2>
 
                 <div className="section">
 
-                    <h3 onClick={handleIncorrect} for="male">{wrongOne}</h3>
-
-                    <h3 onClick={handleCorrect} for="female">{correct}</h3>
-
-                    <h3 onClick={handleIncorrect} for="other">{wrongTwo}</h3>
+                    <h3 onClick={handleIncorrect}>{wrongOne}</h3>
+                    <h3 onClick={handleCorrect}>{correct}</h3>
+                    <h3 onClick={handleIncorrect}>{wrongTwo}</h3>
 
                 </div>
 
-                <h1>{winningMessage}</h1>
+                {/* <h1>{winningMessage}</h1> */}
 
-                {winningMessage === 'Yayy' ?
-                <h2 onClick={handleNextQuestion}>Next Question</h2>
-                : null}
+{/* 
+                <div>
+                    <h3 onClick={handleNextQuestion}>Next Question</h3>
+                </div> */}
 
 
             </div>
