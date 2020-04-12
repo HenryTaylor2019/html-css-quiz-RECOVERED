@@ -36,6 +36,36 @@ class QuizContextProvider extends Component {
                 wrongOne: 'title',
                 wrongTwo: 'href'
             },
+            {
+                question: 'Which of the following property is used to change the face of a font?',
+                correct: 'font-family',
+                wrongOne: 'font-style',
+                wrongTwo: 'font-type'
+            },
+            {
+                question: 'Which of these refers to an element by class?',
+                correct: '.class',
+                wrongOne: '#class',
+                wrongTwo: '_class'
+            },
+            {
+                question: 'Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?',
+                correct: 'alt',
+                wrongOne: 'title',
+                wrongTwo: 'href'
+            },
+            {
+                question: 'How do you add a comment in a CSS file?',
+                correct: '/* this is a comment */',
+                wrongOne: '<--! this is a comment -->',
+                wrongTwo: '// this is a comment //'
+            },
+            {
+                question: 'Which of these is used to change the text color of an element?',
+                correct: 'color:',
+                wrongOne: 'font-color:',
+                wrongTwo: 'text-color:'
+            },
         ],
         score: 0,
         incorrect: null,
