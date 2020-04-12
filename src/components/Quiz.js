@@ -52,8 +52,8 @@ class Quiz extends Component {
 
                 {/* <h1>{winningMessage}</h1> */}
 
-{/* 
-                <div>
+
+            {/* <div>
                     <h3 onClick={handleNextQuestion}>Next Question</h3>
                 </div> */}
 

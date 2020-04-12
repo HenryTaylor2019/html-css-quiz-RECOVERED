@@ -70,7 +70,6 @@ class QuizContextProvider extends Component {
         score: 0,
         incorrect: null,
         questionNumber: 0,
-
     }
 
     handleCorrect = (e) => {
@@ -84,21 +83,21 @@ class QuizContextProvider extends Component {
     }
 
     handleIncorrect = (e) => {
-        let { questionNumber } = this.state.questionNumber
+
         let incorrect = this.state.incorrect + 1;
-        let nextQuestion = questionNumber <= 9 ? questionNumber + 1 : questionNumber;
+        let nextQuestion = this.state.questionNumber + 1;
 
         this.setState({
             incorrect: incorrect,
-            questionNumber: nextQuestion,
-
+            questionNumber: this.state.questionNumber < 9 ? nextQuestion : 0,
+            score: this.state.questionNumber < 9 ? nextQuestion : 0,
+            incorrect: this.state.questionNumber < 9 ? nextQuestion : 0,
         });
         e.preventDefault();
     }
 
     handleReset = (e) => {
     
-
         this.setState({
             score: null,
             incorrect: null,
@@ -115,7 +114,6 @@ class QuizContextProvider extends Component {
                 handleCorrect: this.handleCorrect,
                 handleIncorrect: this.handleIncorrect,
                 handleReset: this.handleReset,
-
             }}>
 
                 {this.props.children}

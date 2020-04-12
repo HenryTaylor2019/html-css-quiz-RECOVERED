@@ -17,7 +17,7 @@ function App() {
       <QuizContextProvidor>
         <Quiz />
       </QuizContextProvidor>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
