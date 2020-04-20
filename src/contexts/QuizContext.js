@@ -78,20 +78,19 @@ class QuizContextProvider extends Component {
         
         this.setState({
             score: correct,
-            questionNumber: nextQuestion,
+            questionNumber: this.state.questionNumber < 10 ? nextQuestion : 0,
+            score: this.state.questionNumber < 10 ? nextQuestion : 0,
+            incorrect: this.state.questionNumber < 10 ? nextQuestion : 0,
         });
     }
 
     handleIncorrect = (e) => {
-
         let incorrect = this.state.incorrect + 1;
         let nextQuestion = this.state.questionNumber + 1;
 
         this.setState({
             incorrect: incorrect,
-            questionNumber: this.state.questionNumber < 9 ? nextQuestion : 0,
-            score: this.state.questionNumber < 9 ? nextQuestion : 0,
-            incorrect: this.state.questionNumber < 9 ? nextQuestion : 0,
+            questionNumber: this.state.questionNumber < 10 ? nextQuestion : 0,
         });
         e.preventDefault();
     }

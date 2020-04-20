@@ -1,25 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
+
 
 import QuizContextProvidor from './contexts/QuizContext';
 
-
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 
-import Quiz from "./components/Quiz";
+import ComponentManager from "./ComponentManager";
 
 
-function App() {
-  return (
-    <div className="App">
-      <Header />
-      <QuizContextProvidor>
-        <Quiz />
-      </QuizContextProvidor>
-      {/* <Footer /> */}
-    </div>
-  );
+class App extends Component {
+
+
+  render() {
+ 
+
+    return (
+      <div className="App">
+        <Header />
+        <QuizContextProvidor>
+        <ComponentManager />
+
+        
+        </QuizContextProvidor>
+        {/* <Footer /> */}
+      </div>
+    );
+  }
 }
 
 export default App;

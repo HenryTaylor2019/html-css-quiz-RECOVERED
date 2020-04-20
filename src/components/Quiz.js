@@ -34,6 +34,8 @@ class Quiz extends Component {
         //     answer = wrongTwo
         // }
 
+
+
         return (
             <div >
                 <button onClick={handleReset}>Home</button>
