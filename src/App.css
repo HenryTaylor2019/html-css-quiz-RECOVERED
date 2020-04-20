@@ -51,33 +51,32 @@ body {
   background-color: rgb(255, 169, 56);
 }
 
-.footer {
-  padding: 10px 0px;
-  /* text-align: center; */
-  background-color: rgb(255, 169, 56);
-  /* margin-bottom: 0px; */
+.main {
+   padding: 5% 0%;
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-  /* margin: auto 10%; */
-  justify-content: center;
-  padding-bottom: 20px;
-
+.footer {
+  padding: 10px 0px;
+  text-align: center;
+  background-color: rgb(255, 169, 56);
 }
 
 .section {
   padding: 10px 10px;
-  /* margin: 10px 10px; */
   margin: auto 30%;
   border: 1px solid rgb(70, 70, 70);
   box-shadow: 1px antiquewhite;
   border-radius: 25px;
   box-shadow: 2.5px 5px #888888;
   margin-bottom: 20px;
+}
 
+.question-section {
+  margin: auto 30%;
+} 
 
+.reset {
+  padding-bottom: 20px;
 }
 
 .center {
@@ -85,59 +84,24 @@ body {
 }
 
 h1, h2, h3, h4, p {
-  /* font-family: 'Amatic SC', cursive; */
   font-family: 'Neucha', cursive;
- 
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 3em;
 }
 
 h2 {
-  font-size: 30px;
-  
+  font-size: 2em;
 }
 
-h3 {
-  font-size: 20px;
-}
-
-p {
-  font-size: 18px;
-}
-
-.social-link {
-  padding: 20px 0px;
-  width: 5%;
-}
-
-.links {
-  margin: auto 5% ;
-  text-align: right;
+h3:hover {
+  color: #888888;
+  cursor: pointer;
 }
 
 ul {
   list-style-type: none;
-  }
-
-  h3:hover {
-    color: #888888;
-    cursor: pointer;
-  }
-
- .questions {
-  margin: auto 30%;
-
- } 
-
- @media screen and (max-width: 450px) {
-
-
-h1, h2, h3, h4, p {
-  font-size: 100%;
-}
-
 }
 
 button {
@@ -153,11 +117,31 @@ button {
   font-family: 'Neucha', cursive;
   font-size: 18px;
   letter-spacing: 2px;
-  background: none;
-  background-color: initial;
+  color: black;
+  /* background: none; */
+  background-color: white;
+}
+
+button:hover {
+  color: white;
+  /* background: none; */
+  background-color: black;
+  border: 3px solid black;
 
 }
 
-.main {
-  padding-bottom: 15%;
+@media screen and (max-width: 800px) {
+
+  h1, h2, h3, h4, p {
+    font-size: 95%;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  h1, h2, h3, h4, p {
+    font-size: 80%;
+  }
+
 }

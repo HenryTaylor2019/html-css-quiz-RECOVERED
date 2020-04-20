@@ -5,7 +5,7 @@ class Quiz extends Component {
     static contextType = QuizContext;
 
     render() {
-        const { quizData, handleCorrect, handleIncorrect, questionNumber, handleReset, score } = this.context;
+        const { quizData, handleCorrect, handleIncorrect, questionNumber } = this.context;
 
         let object = quizData[questionNumber];
 
@@ -13,16 +13,13 @@ class Quiz extends Component {
         let correct = object.correct;
         let wrongOne = object.wrongOne;
         let wrongTwo = object.wrongTwo;
-        let currentScore = questionNumber !== 0 ? score : 0;
+        // let currentScore = questionNumber !== 0 ? score : 0;
+        let currentQuestion = questionNumber + 1;
 
         return (
             <div className="main">
 
-
-                <div className="questions">
-
-
-
+                <div className="question-section">
                     <h2>{question}</h2>
                 </div>
 
@@ -46,8 +43,13 @@ class Quiz extends Component {
                             <h3 onClick={handleCorrect}>{correct}</h3>
                         </div>
                 }
-                <h3>{currentScore} out of 10</h3>
-                <button onClick={handleReset}>Reset</button>
+
+                <div className="counter">
+                    <h3>Question {currentQuestion} of 10</h3>
+                </div>
+
+
+
             </div>
         )
     }
