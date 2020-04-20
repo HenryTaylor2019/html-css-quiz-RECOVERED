@@ -2,63 +2,42 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 
 /* My Styles */
 
+/* 
+#EDFAFD
+#AED9DA
+#2A93D5
+#135589
+#F4E8C1 
+*/
+
 body {
-  background-color: rgb(235, 235, 235);
-  border: 30px solid black;
+  background-color: #2A93D5;
+  margin: 0;
 }
 
 .header {
-  padding: 10px 0px;
+  padding: 4px 0px;
   text-align: center;
-  background-color: rgb(255, 169, 56);
+  background-color: #2A93D5;
 }
 
 .main {
-   padding: 5% 0%;
+   padding: 7% 0%;
+     background-color: #EDFAFD;
+
 }
 
 .footer {
   padding: 10px 0px;
   text-align: center;
-  background-color: rgb(255, 169, 56);
+  background-color: #2A93D5;
 }
 
 .section {
@@ -72,8 +51,13 @@ body {
 }
 
 .question-section {
-  margin: auto 30%;
+  margin: 0% 20%;
+  margin-bottom: 50px;
 } 
+
+.score-page {
+  padding: 13% 0%;
+}
 
 .reset {
   padding-bottom: 20px;
@@ -89,14 +73,24 @@ h1, h2, h3, h4, p {
 
 h1 {
   font-size: 3em;
+  color: #F4E8C1 
+  ;
 }
 
 h2 {
   font-size: 2em;
 }
 
+h3 {
+  letter-spacing: 0.05em;
+}
+
+.final-score {
+  font-size: 60px;
+}
+
 h3:hover {
-  color: #888888;
+  color: #36384C;
   cursor: pointer;
 }
 
@@ -117,31 +111,36 @@ button {
   font-family: 'Neucha', cursive;
   font-size: 18px;
   letter-spacing: 2px;
-  color: black;
-  /* background: none; */
-  background-color: white;
+  color: #F4E8C1;
+  background-color: #2A93D5;
+  border: 3px solid #F4E8C1;
 }
 
 button:hover {
   color: white;
   /* background: none; */
-  background-color: black;
-  border: 3px solid black;
-
-}
-
-@media screen and (max-width: 800px) {
-
-  h1, h2, h3, h4, p {
-    font-size: 95%;
-  }
+  background-color: #2A93D5;
+  border: 3px solid rgb(255, 255, 255);
+  color: black;
+  /* background: none; */
+  background-color: white;
 
 }
 
 @media screen and (max-width: 600px) {
 
-  h1, h2, h3, h4, p {
-    font-size: 80%;
+
+  
+  h2, h3, h4, p {
+    font-size: 1em;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+
+  h2, h3, h4, p, button {
+    font-size: 4vw;
   }
 
 }

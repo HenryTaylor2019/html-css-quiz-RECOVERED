@@ -19,16 +19,20 @@ class Quiz extends Component {
         return (
             <div className="main">
 
-                <div className="question-section">
+                <section className="question-section">
                     <h2>{question}</h2>
-                </div>
+                </section>
+
+
+
+                {/* Consider changing whole page to blue */}
 
                 {/* Conditional to swap answers around - more elegant solution needed */}
                 {questionNumber % 2 === 0 && questionNumber < 5 ?
                     <div className="section">
-                        <h3 onClick={handleIncorrect}>{wrongOne}</h3>
-                        <h3 onClick={handleCorrect}>{correct}</h3>
-                        <h3 onClick={handleIncorrect}>{wrongTwo}</h3>
+                        <h3 onClick={handleIncorrect}>a) {wrongOne}</h3>
+                        <h3 onClick={handleCorrect}>b) {correct}</h3>
+                        <h3 onClick={handleIncorrect}>c) {wrongTwo}</h3>
                     </div>
                     : questionNumber % 3 === 0 && questionNumber < 5 ?
                         <div className="section">
