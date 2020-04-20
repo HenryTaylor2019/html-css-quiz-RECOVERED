@@ -11,32 +11,43 @@ class Quiz extends Component {
 
         let question = object.question;
         let correct = object.correct;
-        let wrongOne =  object.wrongOne;
+        let wrongOne = object.wrongOne;
         let wrongTwo = object.wrongTwo;
+        let currentScore = questionNumber !== 0 ? score : 0;
 
         return (
-            <div >
-                <button onClick={handleReset}>Home</button>
+            <div className="main">
 
-                <h3>{score} out of 10</h3>
 
-                <h2>{question}</h2>
+                <div className="questions">
 
-                {/* Conditional to swap answers around */}
-                {questionNumber % 2 === 0 ?
-                <div className="section"> 
-                    <h3 onClick={handleIncorrect}>{wrongOne}</h3>
-                    <h3 onClick={handleCorrect}>{correct}</h3>
-                    <h3 onClick={handleIncorrect}>{wrongTwo}</h3>
+
+
+                    <h2>{question}</h2>
                 </div>
-                :
-                <div className="section"> 
-                    <h3 onClick={handleCorrect}>{correct}</h3>
-                    <h3 onClick={handleIncorrect}>{wrongOne}</h3>
-                    <h3 onClick={handleIncorrect}>{wrongTwo}</h3>
-                </div>
+
+                {/* Conditional to swap answers around - more elegant solution needed */}
+                {questionNumber % 2 === 0 && questionNumber < 5 ?
+                    <div className="section">
+                        <h3 onClick={handleIncorrect}>{wrongOne}</h3>
+                        <h3 onClick={handleCorrect}>{correct}</h3>
+                        <h3 onClick={handleIncorrect}>{wrongTwo}</h3>
+                    </div>
+                    : questionNumber % 3 === 0 && questionNumber < 5 ?
+                        <div className="section">
+                            <h3 onClick={handleCorrect}>{correct}</h3>
+                            <h3 onClick={handleIncorrect}>{wrongOne}</h3>
+                            <h3 onClick={handleIncorrect}>{wrongTwo}</h3>
+                        </div>
+                        :
+                        <div className="section">
+                            <h3 onClick={handleIncorrect}>{wrongOne}</h3>
+                            <h3 onClick={handleIncorrect}>{wrongTwo}</h3>
+                            <h3 onClick={handleCorrect}>{correct}</h3>
+                        </div>
                 }
-
+                <h3>{currentScore} out of 10</h3>
+                <button onClick={handleReset}>Reset</button>
             </div>
         )
     }

@@ -42,6 +42,7 @@
 
 body {
   background-color: rgb(235, 235, 235);
+  border: 30px solid black;
 }
 
 .header {
@@ -69,12 +70,12 @@ body {
 .section {
   padding: 10px 10px;
   /* margin: 10px 10px; */
-  margin: auto 20%;
+  margin: auto 30%;
   border: 1px solid rgb(70, 70, 70);
   box-shadow: 1px antiquewhite;
-  border-radius: 10%;
+  border-radius: 25px;
   box-shadow: 2.5px 5px #888888;
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 
 
 }
@@ -86,7 +87,7 @@ body {
 h1, h2, h3, h4, p {
   /* font-family: 'Amatic SC', cursive; */
   font-family: 'Neucha', cursive;
-
+ 
 }
 
 h1 {
@@ -95,14 +96,15 @@ h1 {
 
 h2 {
   font-size: 30px;
+  
 }
 
 h3 {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 p {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .social-link {
@@ -120,6 +122,42 @@ ul {
   }
 
   h3:hover {
-    color: green;
+    color: #888888;
     cursor: pointer;
   }
+
+ .questions {
+  margin: auto 30%;
+
+ } 
+
+ @media screen and (max-width: 450px) {
+
+
+h1, h2, h3, h4, p {
+  font-size: 100%;
+}
+
+}
+
+button {
+  cursor: pointer;
+  margin-top: 30px;
+  border: 3px solid;
+  border-radius: 40px;
+  font-weight: 600;
+  min-width: 150px;
+  max-width: 200px;
+  padding: 5px;
+  vertical-align: middle;
+  font-family: 'Neucha', cursive;
+  font-size: 18px;
+  letter-spacing: 2px;
+  background: none;
+  background-color: initial;
+
+}
+
+.main {
+  padding-bottom: 15%;
+}

@@ -37,7 +37,7 @@ class QuizContextProvider extends Component {
                 wrongTwo: 'href'
             },
             {
-                question: 'Which of the following property is used to change the face of a font?',
+                question: 'Which of the following properties is used to change the face of a font?',
                 correct: 'font-family',
                 wrongOne: 'font-style',
                 wrongTwo: 'font-type'
@@ -49,10 +49,10 @@ class QuizContextProvider extends Component {
                 wrongTwo: '_class'
             },
             {
-                question: 'Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?',
-                correct: 'alt',
-                wrongOne: 'title',
-                wrongTwo: 'href'
+                question: 'Which of the following refers to the space around an html element?',
+                correct: 'margin',
+                wrongOne: 'padding',
+                wrongTwo: 'border'
             },
             {
                 question: 'How do you add a comment in a CSS file?',
