@@ -11,7 +11,7 @@ class Quiz extends Component {
 
         let question = object.question;
         let correct = object.correct;
-        let wrongOne = object.wrongOne;
+        let wrongOne =  object.wrongOne;
         let wrongTwo = object.wrongTwo;
 
         return (
@@ -22,14 +22,20 @@ class Quiz extends Component {
 
                 <h2>{question}</h2>
 
-                <div className="section">
-
+                {/* Conditional to swap answers around */}
+                {questionNumber % 2 === 0 ?
+                <div className="section"> 
                     <h3 onClick={handleIncorrect}>{wrongOne}</h3>
                     <h3 onClick={handleCorrect}>{correct}</h3>
                     <h3 onClick={handleIncorrect}>{wrongTwo}</h3>
-
                 </div>
-
+                :
+                <div className="section"> 
+                    <h3 onClick={handleCorrect}>{correct}</h3>
+                    <h3 onClick={handleIncorrect}>{wrongOne}</h3>
+                    <h3 onClick={handleIncorrect}>{wrongTwo}</h3>
+                </div>
+                }
 
             </div>
         )

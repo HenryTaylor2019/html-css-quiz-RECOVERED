@@ -79,6 +79,7 @@ class QuizContextProvider extends Component {
         this.setState({
             score: correct,
             questionNumber: this.state.questionNumber < 10 ? nextQuestion : 0,
+            score: this.state.questionNumber < 10 ? nextQuestion : 0,
             incorrect: this.state.questionNumber < 10 ? nextQuestion : 0,
         });
     }

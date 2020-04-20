@@ -14,7 +14,6 @@ class Score extends Component {
 
                 <button onClick={handleReset}>Home</button>
 
-
             </div>
         )
     }
