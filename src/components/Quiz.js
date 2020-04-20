@@ -5,7 +5,7 @@ class Quiz extends Component {
     static contextType = QuizContext;
 
     render() {
-        const { quizData, handleCorrect, handleIncorrect, questionNumber, handleReset, incorrect, score } = this.context;
+        const { quizData, handleCorrect, handleIncorrect, questionNumber, handleReset, score } = this.context;
 
         let object = quizData[questionNumber];
 
@@ -13,28 +13,6 @@ class Quiz extends Component {
         let correct = object.correct;
         let wrongOne = object.wrongOne;
         let wrongTwo = object.wrongTwo;
-
-        // let winningMessage;
-
-        // if (score > 0) {
-        //     winningMessage = 'Yayy'
-        // } else if (incorrect > 0) {
-        //     winningMessage = 'twat'
-        // } else {
-        //     winningMessage = null;
-        // }
-
-        // let answer;
-
-        // if (questionNumber % 2 === 0) {
-        //     answer = correct
-        // } else if (questionNumber % 2 !== 0) {
-        //     answer = wrongOne
-        // } else {
-        //     answer = wrongTwo
-        // }
-
-
 
         return (
             <div >
@@ -51,13 +29,6 @@ class Quiz extends Component {
                     <h3 onClick={handleIncorrect}>{wrongTwo}</h3>
 
                 </div>
-
-                {/* <h1>{winningMessage}</h1> */}
-
-
-            {/* <div>
-                    <h3 onClick={handleNextQuestion}>Next Question</h3>
-                </div> */}
 
 
             </div>
