@@ -1,7 +1,9 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-##To view this application, follow the link:
+## To view this application, follow the link:
 https://henrytaylor2019.github.io/html-css-quiz-RECOVERED/
+
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
